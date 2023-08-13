@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="container-fluid">
+    <div class="chess-container">
+        <!-- Evalution Bar-->
+        <div class="">
+            <div class="evaluation-bar">
+                <div class="evaluation-bar__inner">
+                    <div class="evaluation-bar__fill"></div>
+                </div>
+            </div>               
+        </div>
+        <!-- Chess Board-->
+        <div class="">
+            <div class="chessboard-container" id="myBoard" style="width:700px"></div>
+        </div>
+        <!-- Notation / Color Selection -->
+        <div class="col-xl-5 col-xxl-6">
+            <div class="trainingInfoSection @*card*@" style="height:697px">
+                <div class="colorSelection" id="colorSelection">
+                    <h4 class="heading mb-0">Select color:</h4>
+                        <div class="colorOption white-button" onclick="ChessTrainer.status.selectSide('white')">
+                        </div>
+                        <div class="colorOption black-button" onclick="ChessTrainer.status.selectSide('black')">
+                        </div>
+                </div>
+                @*<div class="gameNotation" id="gameNotation" style="display:none;">
+                    <div class="openingName " id="openingName"><h4 class="heading mb-0 ">Opening</h4></div>
+                    <div class="pgnInfoSection" id="pgn" style="width: 97%; background-color: #fafcff;">
+                        <h4 class="notationHeading">Opening</h4>
+                    </div>
+                    <div class="fenInfoSection" id="fen" style="width: 97%; background-color: #fafcff; margin-top: 5px;"></div>
+                </div>*@
+                <div class="gameNotation" id="gameNotation" style=" height:692px; display:none;">
+                    <div class="notationHeading">Opening</div>
+                    <div class="pgnInfoSection" id="pgn" background-color: #fafcff;">
+                        
+                    </div>
+                    <div class="fenInfoSection" id="fen" background-color: #fafcff; margin-top: 5px;"></div>
+                    <div class="saveSection" id="fen" background-color: #fafcff; margin-top: 5px;">
+                        <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#" role="button" aria-controls="offcanvasExample">+ Save to Library</a>
+                    </div>
+                </div>
+            </div>                
+        </div>
+    </div>
+</div>
